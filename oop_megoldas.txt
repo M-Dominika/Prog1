@@ -1,0 +1,72 @@
+1. feladat
+    a) Osztály Olga
+    b) Példányosító Pál
+    c) Konstruktor Kristóf
+    d) Desktruktor Dezső
+    e) Öröklődő Olivér
+    f) Absztrakt Anikó
+    g) Polimorf Péter
+    h) Bezáró Bence
+    i) Late Bindig Lajos
+
+2. feladat
+    a) Auto    ...    ~    ...    ev
+    b) private    ...     protected     ...     public
+    c) Vau!, Miau!, Vau!
+
+3. feladat
+    X = interfész    mert: csak pure virtual függvényei vannak
+    Y = absztrakt osztály   mert: van pure virtual függvény, viszont van
+        benne implementáció és adattag is
+
+4. feladat
+    a) Early
+    b) Late
+    c) Early
+    d) Early
+    e) Late
+
+5. feladat
+    class Karakterek {
+        public:
+        virtual ~Karakterek(){}
+            virtual void mozog() = 0; // absztrakt
+            void eletben_van(){}
+        protected:
+            int szint = 0;
+        private:
+            int hp = 100;
+    };
+
+    class Harcosok : public Karakterek {
+        public:
+            virtual void harcol() = 0;   // absztrakt
+        protected:
+            string nev;
+        private:
+            int jatekosID;
+    };
+
+    class Lovagok: public Harcosok {
+        public:
+                Lovagok(string n) {
+                nev = n;
+            }
+
+            void mozog() override {
+                cout << "Lovával előre vágtat\n" << endl;
+            }
+
+            void harcol() override {
+                cout << "A lovag támad\n" << endl;
+            }
+    };
+
+    int main() {
+        Karakterek* k = new Lovagok("Lancelot");
+
+        k->mozog();   // polimorfizmus
+        k->eletben_van();   // közös metódus
+
+        delete k;
+    }
