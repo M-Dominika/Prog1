@@ -1,0 +1,39 @@
+1. feladat
+    a) Változó Vlad
+    b) Pointer Pete
+    c) Xerox Chad
+    d) Key Dealer Kevin
+    e) Null Nick
+    f) Scope Sensei
+    g) Generic Greg
+    h) Recursion Rick
+
+2. feladat
+    a) 1000    ...   1000
+    b) 77
+    c) 0    ...    0    ...    10
+
+3. feladat
+    a) Segfault Samu
+    b) Memory Leak Miki
+    c) Stack Overflow Stan
+
+4. feladat
+Struct Steve
+    Fogalom: struct
+    Személyiség:
+        Steve imád rendszerezni.
+        Ha több adat tartozik egy dologhoz, ő mindet egy csomagba
+        rakja, hogy ne legyen káosz a változók között.
+    Idézet:
+        „Ne szórd szét az adatokat! Rakd őket egy struktúrába.”
+    Kód példa:
+        struct Szemely {
+            int age;
+            char name[20];
+        };
+
+        struct Szemely steve;
+
+        steve.age = 25;
+        steve.name = 'Steve';
